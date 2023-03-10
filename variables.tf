@@ -1,13 +1,26 @@
-variable "AWS_ACCESS_KEY" {}
-variable "AWS_SECRET_KEY" {}
-variable "REGION" {}
+variable "AWS_ACCESS_KEY" {
+  type = string
+}
+variable "AWS_SECRET_KEY" {
+  type = string
+}
+variable "REGION" {
+  type    = string
+  default = "us-east-1"
+}
 
 
 
-variable "provider" {
+variable "tf_provider" {
   type        = string
   default     = "aws"
   description = "provider tag"
+}
+
+variable "env" {
+  type        = string
+  default     = "playpen"
+  description = "env tag"
 }
 
 variable "platform" {
@@ -32,10 +45,4 @@ variable "owner" {
   type        = string
   default     = "ravikumar"
   description = "owner tag"
-}
-
-variable "lob" {
-  type        = string
-  default     = "aws"
-  description = "lob tag"
 }

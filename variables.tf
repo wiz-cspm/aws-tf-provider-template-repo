@@ -10,6 +10,11 @@ variable "REGION" {
 }
 
 
+variable "lob" {
+  type        = string
+  default     = "wiz"
+  description = "lob tag"
+}
 
 variable "tf_provider" {
   type        = string
